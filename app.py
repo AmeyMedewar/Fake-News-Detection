@@ -73,7 +73,7 @@ class FakeNewsDetector:
         if gemini_api_key:
             try:
                 model = ChatGoogleGenerativeAI(model="gemini-2.5-flash",
-            google_api_key='AIzaSyD-qPr1BoqvEz1udKPJynVmP9LzHgcg_50')
+            google_api_key='key')
             except Exception as e:
                 st.error(f"Failed to initialize Gemini: {str(e)}")
                 self.model = None
@@ -788,4 +788,5 @@ def main():
     """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
+
     main()
